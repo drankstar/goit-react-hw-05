@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom"
 import Navigation from "./Navigation/Navigation"
-import HomePage from "./pages/HomePage"
 import MoviesPage from "./pages/MoviesPage"
 import NotFoundPage from "./pages/NotFoundPage"
 import MovieDetailsPage from "./pages/MovieDetailsPage"
+import HomePage from "./pages/HomePage"
 
 function App() {
   return (

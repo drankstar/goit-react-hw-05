@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import Navigation from "./Navigation/Navigation"
+import Navigation from "./Components/Navigation/Navigation"
 import MoviesPage from "./pages/MoviesPage"
 import NotFoundPage from "./pages/NotFoundPage"
 import MovieDetailsPage from "./pages/MovieDetailsPage"

@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.link {
+    color: black;
+}
+
+.link:hover {
+    color: rgb(255, 60, 0);
+}
+
+.isActive {
+    color: rgb(255, 60, 0);
+}

@@ -1,12 +1,17 @@
+import { Link } from "react-router-dom"
+
 const MovieList = ({ items }) => {
-  console.log(items)
   return (
     <ul>
-      <li>
-        <h2>{items.title}</h2>
-        <img src={items.poster_path} alt='' />
-        <p></p>
-      </li>
+      {items.map((item) => (
+        <li key={item.id}>
+          <Link to='/movies'>{item.title}</Link>
+          {/* <img
+            src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+            alt=''
+          /> */}
+        </li>
+      ))}
     </ul>
   )
 }

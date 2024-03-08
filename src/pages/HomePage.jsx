@@ -4,6 +4,7 @@ import MovieList from "../Components/MovieList/MovieList"
 const Homepage = () => {
   const [resp, setResp] = useState([])
 
+
   useEffect(() => {
     async function getData() {
       try {

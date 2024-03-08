@@ -10,7 +10,6 @@ import MovieReviews from "./Components/MovieReviews/MovieReviews"
 function App() {
   return (
     <div>
-      <h1>React Router</h1>
       <Navigation />
 
       <Routes>

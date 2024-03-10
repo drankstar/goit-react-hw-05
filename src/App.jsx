@@ -1,15 +1,18 @@
 import { Route, Routes } from "react-router-dom"
 import Navigation from "./Components/Navigation/Navigation"
-import MoviesPage from "./pages/MoviesPage"
-import NotFoundPage from "./pages/NotFoundPage"
-import MovieDetailsPage from "./pages/MovieDetailsPage"
-
-import MovieCast from "./Components/MovieCast/MovieCast"
-import MovieReviews from "./Components/MovieReviews/MovieReviews"
 import { Toaster } from "react-hot-toast"
 import { Suspense, lazy } from "react"
 
-const HomePage = lazy(() => import("./pages/HomePage"))
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"))
+const MovieDetailsPage = lazy(() =>
+  import("./pages/MovieDetailsPage/MovieDetailsPage")
+)
+const MoviesPage = lazy(() => import("./pages/MoviesPage/MoviesPage"))
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"))
+const MovieCast = lazy(() => import("./Components/MovieCast/MovieCast"))
+const MovieReviews = lazy(() =>
+  import("./Components/MovieReviews/MovieReviews")
+)
 
 function App() {
   return (

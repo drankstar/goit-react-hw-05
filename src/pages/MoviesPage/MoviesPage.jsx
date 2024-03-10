@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { MovieSearchApi } from "/moviesApi.js"
-import MovieList from "../Components/MovieList/MovieList"
+import MovieList from "../../Components/MovieList/MovieList"
 import { useSearchParams } from "react-router-dom"
 import styles from "./MoviesPage.module.css"
 import { CiSearch } from "react-icons/ci"

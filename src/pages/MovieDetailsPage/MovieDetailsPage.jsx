@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import toast from "react-hot-toast"
 import { NavLink, Outlet, useNavigate, useParams } from "react-router-dom"
-import { MovieInfoApi } from "../../moviesApi"
+import { MovieInfoApi } from "../../../moviesApi"
 import styles from "./MovieDetailsPage.module.css"
 import { IoArrowUndo } from "react-icons/io5"
 

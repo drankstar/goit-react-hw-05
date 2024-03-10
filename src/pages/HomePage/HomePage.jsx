@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { trendingMoviesApi } from "/moviesApi.js"
-import MovieList from "../Components/MovieList/MovieList"
+import MovieList from "../../Components/MovieList/MovieList"
 import toast from "react-hot-toast"
 
 const Homepage = () => {

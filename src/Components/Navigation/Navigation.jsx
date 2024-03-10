@@ -7,7 +7,7 @@ const getClassLink = ({ isActive }) => {
 }
 const Navigation = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <nav className={styles.nav}>
         <NavLink className={getClassLink} to='/'>
           Home

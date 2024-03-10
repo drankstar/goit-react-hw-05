@@ -28,3 +28,13 @@ export const MovieInfoApi = async (movieId) => {
   const respons = await api.get(`/movie/${movieId}`)
   return respons.data
 }
+
+export const constInfoApi = async (movieId) => {
+  const respons = await api.get(`movie/${movieId}/credits`)
+  return respons.data
+}
+
+export const reviewsInfoApi = async (movieId) => {
+  const respons = await api.get(`/movie/${movieId}/reviews`)
+  return respons.data
+}

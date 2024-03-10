@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import toast from "react-hot-toast"
 import { useParams } from "react-router-dom"
 import { constInfoApi } from "../../../moviesApi"
+import styles from "./MovieCast.module.css"
 
 const MovieCast = () => {
   const [movieCast, setMovieCast] = useState([])
@@ -24,11 +25,12 @@ const MovieCast = () => {
   }, [movieId])
 
   return movieCast.length > 0 ? (
-    <ul>
+    <ul className={styles.list}>
       {movieCast.map((cast) => (
-        <li key={cast.id}>
+        <li className={styles.item} key={cast.id}>
           <p>{cast.name}</p>
           <img
+            className={styles.img}
             src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`}
             alt={cast.original_name}
           />

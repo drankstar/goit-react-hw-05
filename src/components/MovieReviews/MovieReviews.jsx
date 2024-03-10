@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { reviewsInfoApi } from "../../../moviesApi"
 import toast from "react-hot-toast"
 import { useParams } from "react-router-dom"
+import styles from "./MovieReviews.module.css"
 
 const MovieReviews = () => {
   const [MovieReviews, setMovieReviews] = useState([])
@@ -27,13 +28,15 @@ const MovieReviews = () => {
     <div>
       {MovieReviews.map((reviews) => (
         <div key={reviews.id}>
-          <p>Author: {reviews.author_details.username}</p>
-          <p>{reviews.content}</p>
+          <p className={styles.text}>
+            Author: {reviews.author_details.username}
+          </p>
+          <p className={styles.text}>{reviews.content}</p>
         </div>
       ))}
     </div>
   ) : (
-    <p>Not found!</p>
+    <p className={styles.text}>Not found!</p>
   )
 }
 

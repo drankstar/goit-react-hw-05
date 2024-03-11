@@ -4,7 +4,7 @@ import { Link, NavLink, Outlet, useLocation, useParams } from "react-router-dom"
 import { MovieInfoApi } from "../../../moviesApi"
 import styles from "./MovieDetailsPage.module.css"
 import { IoArrowUndo } from "react-icons/io5"
-import Loader from "../../components/loader/Loader"
+import Loader from "../../components2/loader/Loader"
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams()

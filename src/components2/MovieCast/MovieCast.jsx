@@ -16,7 +16,7 @@ const MovieCast = () => {
         const data = await constInfoApi(movieId)
         setMovieCast(data.cast)
       } catch (error) {
-        toast.error("Please enter a search word!")
+        toast.error("Opps! something wrong try again!")
       }
     }
 

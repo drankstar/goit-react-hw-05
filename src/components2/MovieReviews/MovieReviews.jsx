@@ -17,7 +17,7 @@ const MovieReviews = () => {
         setMovieReviews(data.results)
         console.log(data.results)
       } catch (error) {
-        toast.error("Please enter a search word!")
+        toast.error("Opps! something wrong try again!")
       }
     }
 

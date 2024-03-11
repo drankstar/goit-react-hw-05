@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import Navigation from "./components/Navigation/Navigation"
+import Navigation from "./components2/Navigation/Navigation"
 import { Toaster } from "react-hot-toast"
 import { Suspense, lazy } from "react"
 
@@ -9,9 +9,9 @@ const MovieDetailsPage = lazy(() =>
 )
 const MoviesPage = lazy(() => import("./pages/MoviesPage/MoviesPage"))
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"))
-const MovieCast = lazy(() => import("./components/MovieCast/MovieCast"))
+const MovieCast = lazy(() => import("./components2/MovieCast/MovieCast"))
 const MovieReviews = lazy(() =>
-  import("./components/MovieReviews/MovieReviews")
+  import("./components2/MovieReviews/MovieReviews")
 )
 
 function App() {

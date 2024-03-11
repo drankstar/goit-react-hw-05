@@ -31,7 +31,7 @@ const MovieCast = () => {
           <img
             className={styles.img}
             src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`}
-            alt=''
+            alt={cast.name}
           />
         </li>
       ))}

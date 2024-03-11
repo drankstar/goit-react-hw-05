@@ -46,7 +46,7 @@ const MoviesPage = () => {
           className={styles.input}
           autoComplete='off'
           type='text'
-          placeholder='Search images and photos'
+          placeholder='Search movie'
           name='inputValue'
           value={inputValue}
           onChange={handleChange}

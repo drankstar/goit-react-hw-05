@@ -7,7 +7,6 @@ import styles from "./MovieCast.module.css"
 const MovieCast = () => {
   const [movieCast, setMovieCast] = useState([])
   const { movieId } = useParams()
-  console.log(movieCast)
 
   useEffect(() => {
     if (!movieId) return
@@ -23,16 +22,16 @@ const MovieCast = () => {
 
     getData()
   }, [movieId])
-
   return movieCast.length > 0 ? (
     <ul className={styles.list}>
       {movieCast.map((cast) => (
         <li className={styles.item} key={cast.id}>
           <p>{cast.name}</p>
+          {console.log(cast)}
           <img
             className={styles.img}
             src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`}
-            alt={cast.original_name}
+            alt=''
           />
         </li>
       ))}

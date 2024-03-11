@@ -1,38 +1,43 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import toast from "react-hot-toast"
-import { NavLink, Outlet, useNavigate, useParams } from "react-router-dom"
+import { Link, NavLink, Outlet, useLocation, useParams } from "react-router-dom"
 import { MovieInfoApi } from "../../../moviesApi"
 import styles from "./MovieDetailsPage.module.css"
 import { IoArrowUndo } from "react-icons/io5"
+import Loader from "../../components/loader/Loader"
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams()
   const [movieInfo, setMovieInfo] = useState(null)
-  const navigate = useNavigate()
+  const location = useLocation()
+  const backLinkref = useRef(location.state ?? "/movies")
+  const [loading, setLoading] = useState(false)
+
   useEffect(() => {
     if (!movieId) return
 
     async function getData() {
       try {
+        setLoading(true)
         const data = await MovieInfoApi(movieId)
         setMovieInfo(data)
       } catch {
-        toast.error("Please enter a search word!")
+        toast.error("Opps! something wrong try again!")
+      } finally {
+        setLoading(false)
       }
     }
 
     getData()
   }, [movieId])
 
-  const handleClick = () => {
-    navigate(-1)
-  }
-
   return (
     <>
-      <button className={styles.backBtn} onClick={handleClick}>
+      <Link to={backLinkref.current}>
         <IoArrowUndo className={styles.svg} />
-      </button>
+      </Link>
+
+      {loading && <Loader />}
       {movieInfo && (
         <div>
           <h2 className={styles.title}>{movieInfo.title}</h2>

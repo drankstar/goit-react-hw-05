@@ -5,12 +5,14 @@ import { useSearchParams } from "react-router-dom"
 import styles from "./MoviesPage.module.css"
 import { CiSearch } from "react-icons/ci"
 import toast from "react-hot-toast"
+import Loader from "../../components/loader/Loader"
 
 const MoviesPage = () => {
   const [resp, setResp] = useState([])
   const [searchParams, setSearchParams] = useSearchParams()
   const query = searchParams.get("q")
   const [inputValue, setInputValue] = useState(query || "")
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -28,11 +30,13 @@ const MoviesPage = () => {
 
     async function getData() {
       try {
+        setLoading(true)
         const data = await MovieSearchApi({ query })
-
         setResp(data.results)
       } catch {
         toast.error("Opps! something wrong try again")
+      } finally {
+        setLoading(false)
       }
     }
 
@@ -54,6 +58,7 @@ const MoviesPage = () => {
         <button className={styles.searchBtn} type='submit'>
           Search <CiSearch />
         </button>
+        {loading && <Loader />}
       </form>
       {resp.length > 0 && <MovieList items={resp} />}
     </div>

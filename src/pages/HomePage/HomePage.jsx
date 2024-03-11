@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { trendingMoviesApi } from "/moviesApi.js"
-import MovieList from "../../components2/MovieList/MovieList"
+import MovieList from "../../components/MovieList/MovieList"
 import toast from "react-hot-toast"
-import Loader from "../../components2/loader/Loader"
+import Loader from "../../components/loader/Loader"
 
 const Homepage = () => {
   const [resp, setResp] = useState([])

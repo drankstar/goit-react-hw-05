@@ -32,7 +32,7 @@ const MovieCast = () => {
             className={styles.img}
             src={
               cast.profile_path === null
-                ? "/src/img/image-not-found-scaled-1150x647.png "
+                ? "/src/assets/img/image-not-found-scaled-1150x647.png "
                 : `https://image.tmdb.org/t/p/w500${cast.profile_path}`
             }
             alt='NO FOTO!'

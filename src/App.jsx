@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom"
 import Navigation from "./components/Navigation/Navigation"
 import { Toaster } from "react-hot-toast"
 import { Suspense, lazy } from "react"
-import MoviesVideos from "./components/MoviesVideos/MoviesVideos"
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"))
 const MovieDetailsPage = lazy(() =>
@@ -26,7 +25,6 @@ function App() {
           <Route path='/movies/:movieId' element={<MovieDetailsPage />}>
             <Route path='cast' element={<MovieCast />} />
             <Route path='reviews' element={<MovieReviews />} />
-            <Route path='video' element={<MoviesVideos />} />
           </Route>
           <Route path='*' element={<NotFoundPage />} />
         </Routes>

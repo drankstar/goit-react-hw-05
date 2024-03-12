@@ -68,9 +68,6 @@ const MovieDetailsPage = () => {
 
       <ul>
         <li>
-          <NavLink to='video'>Video</NavLink>
-        </li>
-        <li>
           <NavLink className={styles.link} to='cast'>
             Cast
           </NavLink>

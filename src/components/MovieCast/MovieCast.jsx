@@ -30,7 +30,11 @@ const MovieCast = () => {
           {console.log(cast)}
           <img
             className={styles.img}
-            src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`}
+            src={
+              cast.profile_path === null
+                ? "/src/img/image-not-found-scaled-1150x647.png "
+                : `https://image.tmdb.org/t/p/w500${cast.profile_path}`
+            }
             alt='NO FOTO!'
           />
         </li>

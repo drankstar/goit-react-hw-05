@@ -3,6 +3,7 @@ import toast from "react-hot-toast"
 import { useParams } from "react-router-dom"
 import { constInfoApi } from "../../../moviesApi"
 import styles from "./MovieCast.module.css"
+import defultImg from "../../assets/image-not-found-scaled-1150x647.png"
 
 const MovieCast = () => {
   const [movieCast, setMovieCast] = useState([])
@@ -32,7 +33,7 @@ const MovieCast = () => {
             className={styles.img}
             src={
               cast.profile_path === null
-                ? "/src/assets/image-not-found-scaled-1150x647.png "
+                ? defultImg
                 : `https://image.tmdb.org/t/p/w500${cast.profile_path}`
             }
             alt='NO FOTO!'
